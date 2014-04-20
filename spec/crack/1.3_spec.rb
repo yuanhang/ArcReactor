@@ -15,6 +15,10 @@ describe SameComponents do
       it "same length, same components, contains non-alphabet char" do
         assert true, "a5$@%!", "a!@%$5"  
       end
+
+      it "empty" do
+        assert true, "", ""  
+      end
     end
 
     context "returns false if string made up with different components" do
@@ -28,6 +32,10 @@ describe SameComponents do
 
       it "same length, different component, non-alphabet" do
         assert false, "$%^&*()ac", "a$%@&*()c"  
+      end
+
+      it "nil" do
+        assert false, nil, nil  
       end
     end
   end
