@@ -23,5 +23,9 @@ describe UniqueChecker do
     it "returns false when string is nil" do
       assert_uniq false, nil 
     end
+
+    it "returns false when input is a number" do
+      assert_uniq false, 5 
+    end
   end
 end
