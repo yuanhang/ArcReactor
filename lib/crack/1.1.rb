@@ -5,7 +5,7 @@ class UniqueChecker
     hash = {}
     s.each_char do |c|
       if hash.has_key? c
-        puts "Found duplicate key, #{c}"
+        #puts "Found duplicate key, #{c}"
         return false
       else
         hash[c] = true
