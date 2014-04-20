@@ -1,6 +1,9 @@
 class SameComponents
   def self.same_components? s1, s2
+    return false if s1.nil? || s2.nil? 
+    return false if !s1.is_a?(String) || !s2.is_a?(String)
     return false if s1.length != s2.length
+
     hash = {} 
     s1.each_char do |c1|
       if hash.has_key? c1

@@ -19,6 +19,14 @@ describe SameComponents do
       it "empty" do
         assert true, "", ""  
       end
+
+      it "numbers string" do
+        assert true, "545", "545"  
+      end
+
+      it "returns when even contains space" do
+        assert true, "a bcabc", "aabbcc "  
+      end
     end
 
     context "returns false if string made up with different components" do
@@ -36,6 +44,18 @@ describe SameComponents do
 
       it "nil" do
         assert false, nil, nil  
+      end
+
+      it "returns false when input are not strings, 1" do
+        assert false, "a", 5  
+      end
+
+      it "returns false when input are not strings, 1" do
+        assert false, 6, 5  
+      end
+
+      it "returns false when input are not strings, 1" do
+        assert false, 6, "5" 
       end
     end
   end
