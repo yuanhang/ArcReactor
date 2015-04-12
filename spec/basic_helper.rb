@@ -1,1 +1,1 @@
-$LOAD_PATH.unshift('basic')
+$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '../', 'lib', 'basic'))
